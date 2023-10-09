@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Company</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Education Company</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <body>
+     <h1>Welcome to Your Web Application</h1>
+    <p>This is a simple web application.</p>
+    <button onclick="runPythonScript()">Run Python Script</button>
+    <p id="output"></p>
+    <script>
+        function runPythonScript() {
+            // You can use JavaScript to make an AJAX request to your Python script
+            // and update the output on the web page.
+            fetch('/run_script')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('output').textContent = data;
+                });
+        }
+    </script>
+    <!-- Header Section -->
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Our Education Company</h1>
+            <p>Unlock your potential with our diverse range of courses.</p>
+            <a href="#" class="cta-button">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Featured Courses Section -->
+    <section class="featured-courses">
+        <h2>Featured Courses</h2>
+        <div class="course-card">
+            <img src="course1.jpg" alt="Course 1">
+            <h3>Course 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="#">Learn More</a>
+        </div>
+        <div class="course-card">
+            <img src="course2.jpg" alt="Course 2">
+            <h3>Course 2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="#">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2023 Education Company. All rights reserved.</p>
+    </footer>
+</body>
+</html>
